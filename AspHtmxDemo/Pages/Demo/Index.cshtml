@@ -1,0 +1,12 @@
+﻿@page
+@model AspHtmxDemo.Pages.Demo.IndexModel
+
+<h1>Hello, World!</h1>
+
+<div id="YourNumber">
+    <partial name="_YourNumber" />
+</div>
+
+<button class="btn btn-lg btn-primary my-3"
+        hx-get="@Url.Page("Index", "YourNumber")"
+        hx-target="#YourNumber">Get a new number</button>
