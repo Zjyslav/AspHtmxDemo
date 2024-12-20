@@ -19,9 +19,9 @@ public class IndexModel : PageModel
         return Partial("_YourNumber", this);
     }
 
-    public async Task<PartialViewResult> OnGetNumberListItemAsync()
+    public async Task<PartialViewResult> OnPostNumberListItemAsync(int yourNumber)
     {
-        OnGet();
+        YourNumber = yourNumber;
         await Task.Delay(250);
         return Partial("_NumberListItem", this);
     }

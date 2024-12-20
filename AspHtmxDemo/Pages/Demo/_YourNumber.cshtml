@@ -1,3 +1,9 @@
 ﻿@model IndexModel
 
-<p>Your number is: <strong>@Model.YourNumber</strong></p>
+<p>
+    Your number is:
+    <strong>@Model.YourNumber</strong>
+    <form method="post" action="">
+        <input hidden asp-for="YourNumber" />
+    </form>
+</p>
