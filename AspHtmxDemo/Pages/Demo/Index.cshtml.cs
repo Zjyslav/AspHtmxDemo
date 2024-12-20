@@ -18,4 +18,11 @@ public class IndexModel : PageModel
         await Task.Delay(1000);
         return Partial("_YourNumber", this);
     }
+
+    public async Task<PartialViewResult> OnGetNumberListItemAsync()
+    {
+        OnGet();
+        await Task.Delay(250);
+        return Partial("_NumberListItem", this);
+    }
 }

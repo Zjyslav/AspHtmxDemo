@@ -7,10 +7,28 @@
     <partial name="_YourNumber" />
 </div>
 
-<button class="btn btn-primary my-2 col-2"
-        hx-get="@Url.Page("Index", "YourNumber")"
-        hx-target="#YourNumber"
-        hx-disabled-elt="this">
-    <span class="spinner-border spinner-border-sm htmx-indicator" aria-hidden="true"></span>
-    <span class="button-text">Get a new number</span>
-</button>
+<div>
+    <button class="btn btn-primary my-2 col-2"
+            hx-get="@Url.Page("Index", "YourNumber")"
+            hx-target="#YourNumber"
+            hx-disabled-elt="this">
+        <span class="spinner-border spinner-border-sm htmx-indicator" aria-hidden="true"></span>
+        <span class="button-text">Get your number</span>
+    </button>
+</div>
+
+<div>
+    <button class="btn btn-primary my-2 col-2"
+            hx-get="@Url.Page("Index", "NumberListItem")"
+            hx-target="#NumberList"
+            hx-swap="beforeend"
+            hx-disabled-elt="this">
+        <span class="spinner-border spinner-border-sm htmx-indicator" aria-hidden="true"></span>
+        <span class="button-text">Add number to the list</span>
+    </button>
+</div>
+
+
+<ul id="NumberList" class="list-group col-2 text-center">
+
+</ul>

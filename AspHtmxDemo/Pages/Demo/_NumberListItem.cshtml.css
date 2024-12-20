@@ -1,0 +1,13 @@
+﻿#NumberList li {
+    animation: fadeBackground 1s ease forwards;
+}
+
+@keyframes fadeBackground {
+    from {
+        background-color: var(--bs-primary);
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
