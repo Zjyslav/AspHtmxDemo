@@ -7,6 +7,10 @@
     <partial name="_YourNumber" />
 </div>
 
-<button class="btn btn-lg btn-primary my-3"
+<button class="btn btn-primary my-2 col-2"
         hx-get="@Url.Page("Index", "YourNumber")"
-        hx-target="#YourNumber">Get a new number</button>
+        hx-target="#YourNumber"
+        hx-disabled-elt="this">
+    <span class="spinner-border spinner-border-sm htmx-indicator" aria-hidden="true"></span>
+    <span class="button-text">Get a new number</span>
+</button>

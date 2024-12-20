@@ -12,9 +12,10 @@ public class IndexModel : PageModel
         YourNumber = Random.Shared.Next(1, 100);
     }
 
-    public PartialViewResult OnGetYourNumber()
+    public async Task<PartialViewResult> OnGetYourNumberAsync()
     {
         OnGet();
+        await Task.Delay(1000);
         return Partial("_YourNumber", this);
     }
 }
