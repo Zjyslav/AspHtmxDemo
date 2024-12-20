@@ -7,3 +7,10 @@
         <input hidden asp-for="YourNumber" />
     </form>
 </p>
+
+@if (Model.IncludeListItem)
+{
+    <ul hx-swap-oob="beforeend:#NumberList">
+        <partial name="_NumberListItem" />
+    </ul>
+}

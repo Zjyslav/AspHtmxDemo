@@ -15,6 +15,13 @@
         <span class="spinner-border spinner-border-sm htmx-indicator" aria-hidden="true"></span>
         <span class="button-text">Get your number</span>
     </button>
+    <button class="btn btn-primary my-2 col-12 col-md-6 col-xl-4 col-xxl-3"
+            hx-get="@Url.Page("Index", "YourNumber", new IndexModel {IncludeListItem = true})"
+            hx-target="#YourNumber"
+            hx-disabled-elt="this">
+        <span class="spinner-border spinner-border-sm htmx-indicator" aria-hidden="true"></span>
+        <span class="button-text">Get your number and add to list</span>
+    </button>
 </div>
 
 <div>
